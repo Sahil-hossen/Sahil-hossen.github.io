@@ -1,6 +1,6 @@
 import Section from "./Section";
 import { projects } from "../data/portfolio";
-import { CodeIcon, ArrowIcon } from "./icons";
+import { CodeIcon, ArrowIcon, GithubIcon } from "./icons";
 
 export default function Projects() {
   return (
@@ -34,15 +34,29 @@ export default function Projects() {
               ))}
             </div>
 
-            {p.link && (
-              <a
-                className="project-link"
-                href={p.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                View on GitHub <ArrowIcon />
-              </a>
+            {(p.demo || p.link) && (
+              <div className="project-actions">
+                {p.demo && (
+                  <a
+                    className="project-demo"
+                    href={p.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="live-dot" /> Live Demo <ArrowIcon />
+                  </a>
+                )}
+                {p.link && (
+                  <a
+                    className="project-link"
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <GithubIcon size={15} /> Code
+                  </a>
+                )}
+              </div>
             )}
           </article>
         ))}

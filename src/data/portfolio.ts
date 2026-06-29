@@ -52,6 +52,7 @@ export type Project = {
   highlights: string[];
   tags: string[];
   link?: string;
+  demo?: string;
   featured?: boolean;
 };
 
@@ -96,13 +97,16 @@ export const projects: Project[] = [
   {
     name: "LiveLocator",
     blurb:
-      "Real-time location-tracking web app with bidirectional updates and live map markers.",
+      "Real-time location-tracking web app with bidirectional updates and live map markers. Open the live demo and allow location to see your marker on the map.",
     highlights: [
       "Socket.IO for real-time bidirectional updates",
       "Leaflet.js + OpenStreetMap live user markers",
       "Handled connection drops, stale sessions, and geolocation denials",
     ],
     tags: ["Node.js", "Express", "Socket.IO", "Leaflet.js", "EJS"],
+    demo: "https://livelocator-pm7c.onrender.com",
+    link: "https://github.com/Sahil-hossen/RealTime-Tracker",
+    featured: true,
   },
   {
     name: "RTI Registration APIs",
