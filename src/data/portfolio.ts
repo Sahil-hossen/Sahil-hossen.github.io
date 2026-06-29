@@ -29,7 +29,6 @@ export const experience: Experience[] = [
     location: "Pune, India",
     points: [
       "Built GitSense (NestJS, React, TypeScript), a RAG pipeline with AST code chunking, Titan v2 embeddings, and hybrid kNN/BM25 retrieval over S3 Vectors for accurate, source-cited code answers.",
-      "Developed a production voucher microservice (NestJS, AWS DynamoDB, Lambda, S3) supporting batch creation, presigned-URL exports, and idempotent redemptions with async wallet settlement.",
       "Contributed to Docu AI, a GenAI tool that auto-generates documentation from PR diffs via AWS Bedrock and syncs to Confluence; set up GitHub Actions CI/CD and CloudWatch monitoring.",
       "Built a YAML-based regression test harness for the RAG pipeline, validating file paths, code snippets, and tool-call outputs on every change.",
       "Developed the React UI for querying the codebase with cited answers; contributed to API design, code reviews, and sprint releases.",
@@ -67,18 +66,6 @@ export const projects: Project[] = [
       "React UI for querying the codebase with citations",
     ],
     tags: ["NestJS", "React", "TypeScript", "AWS Bedrock", "RAG", "S3 Vectors"],
-    featured: true,
-  },
-  {
-    name: "Voucher Microservice",
-    blurb:
-      "Production microservice for voucher lifecycle — creation, export, and redemption at scale.",
-    highlights: [
-      "Batch creation + presigned-URL exports",
-      "Idempotent redemptions with async wallet settlement",
-      "Built on serverless AWS primitives",
-    ],
-    tags: ["NestJS", "AWS DynamoDB", "AWS Lambda", "S3", "Microservices"],
     featured: true,
   },
   {
