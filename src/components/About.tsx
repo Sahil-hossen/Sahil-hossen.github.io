@@ -14,10 +14,10 @@ export default function About() {
           </p>
           <p>
             Most recently at <strong>Amdocs</strong>, I built production GenAI
-            systems: a <strong>RAG pipeline</strong> for source-cited code
-            answers, a serverless <strong>voucher microservice</strong>, and a
-            documentation tool powered by AWS Bedrock. I care about clean APIs,
-            reliable tests, and shipping things that hold up under real traffic.
+            systems: <strong>GitSense</strong>, a RAG pipeline for source-cited
+            code answers, and <strong>Docu AI</strong>, a documentation tool
+            powered by AWS Bedrock. I care about clean APIs, reliable tests, and
+            shipping things that hold up under real traffic.
           </p>
           <p>
             My toolkit spans <strong>Python, TypeScript, React, NestJS,
