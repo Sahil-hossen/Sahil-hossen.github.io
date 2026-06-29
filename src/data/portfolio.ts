@@ -53,6 +53,7 @@ export type Project = {
   tags: string[];
   link?: string;
   demo?: string;
+  prs?: { label: string; url: string }[];
   featured?: boolean;
 };
 
@@ -111,13 +112,18 @@ export const projects: Project[] = [
   {
     name: "RTI Registration APIs",
     blurb:
-      "RESTful Spring Boot APIs for a government RTI registration system at NIC.",
+      "RESTful Spring Boot APIs for the government RTI Online registration system, contributed at NIC.",
     highlights: [
-      "Spring Boot REST APIs over PostgreSQL",
-      "Validated correctness across relational tables",
-      "Systematic API testing with Postman",
+      "Built the Title and GetRole APIs (entity, repository, service, controller)",
+      "Two pull requests reviewed and merged into the nictraining org",
+      "Spring Boot REST APIs over PostgreSQL, tested with Postman",
     ],
     tags: ["Spring Boot", "Java", "PostgreSQL", "REST APIs", "Postman"],
+    link: "https://github.com/Sahil-hossen/RTIOnline",
+    prs: [
+      { label: "Merged PR #26 · Title API", url: "https://github.com/nictraining/RTIOnline/pull/26" },
+      { label: "Merged PR #30 · GetRole API", url: "https://github.com/nictraining/RTIOnline/pull/30" },
+    ],
   },
 ];
 

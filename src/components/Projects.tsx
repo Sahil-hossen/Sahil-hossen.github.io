@@ -1,6 +1,6 @@
 import Section from "./Section";
 import { projects } from "../data/portfolio";
-import { CodeIcon, ArrowIcon, GithubIcon } from "./icons";
+import { CodeIcon, ArrowIcon, GithubIcon, MergeIcon } from "./icons";
 
 export default function Projects() {
   return (
@@ -56,6 +56,22 @@ export default function Projects() {
                     <GithubIcon size={15} /> Code
                   </a>
                 )}
+              </div>
+            )}
+
+            {p.prs && (
+              <div className="project-prs">
+                {p.prs.map((pr) => (
+                  <a
+                    key={pr.url}
+                    className="pr-link"
+                    href={pr.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <MergeIcon size={14} /> {pr.label}
+                  </a>
+                ))}
               </div>
             )}
           </article>

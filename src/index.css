@@ -564,6 +564,23 @@ h1, h2, h3 {
   border-color: var(--accent);
   transform: translateY(-2px);
 }
+.project-prs {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 12px;
+}
+.pr-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--accent-3);
+  font-weight: 500;
+}
+.pr-link:hover {
+  text-decoration: underline;
+}
 .featured-flag {
   font-family: var(--mono);
   font-size: 0.68rem;
