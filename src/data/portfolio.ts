@@ -10,7 +10,7 @@ export const profile = {
   phone: "+91-9362125184",
   github: "https://github.com/Sahil-hossen",
   linkedin: "https://www.linkedin.com/in/sahil-hossen",
-  resume: "/Sahil_Hossen_Resume.pdf",
+  resume: "/Sahil_Hossen_Resume.pdf?v=2",
 };
 
 export type Experience = {
