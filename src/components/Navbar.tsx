@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { profile } from "../data/portfolio";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#about", label: "About" },
@@ -45,13 +46,16 @@ export default function Navbar() {
           </a>
         </nav>
 
-        <button
-          className="nav-toggle"
-          aria-label="Toggle menu"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? "\u2715" : "\u2630"}
-        </button>
+        <div className="nav-right">
+          <ThemeToggle />
+          <button
+            className="nav-toggle"
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? "\u2715" : "\u2630"}
+          </button>
+        </div>
       </div>
     </header>
   );
