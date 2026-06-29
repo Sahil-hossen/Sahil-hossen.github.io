@@ -68,6 +68,7 @@ export const projects: Project[] = [
       "Model-agnostic on Groq (free), one-line swap to local Ollama",
     ],
     tags: ["Python", "Multi-Agent", "LLM", "Groq", "Streamlit", "Agentic AI"],
+    demo: "https://deep-research-agent-bsdizjmf8zsqvkydprrbhs.streamlit.app/",
     link: "https://github.com/Sahil-hossen/deep-research-agent",
     featured: true,
   },
