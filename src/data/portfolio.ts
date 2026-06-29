@@ -59,6 +59,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Deep Research Agent",
+    blurb:
+      "A multi-agent system that researches the web and writes a cited report — a from-scratch 'Deep Research' tool.",
+    highlights: [
+      "Planner → Researchers → Writer → Critic (Reflexion) multi-agent pipeline",
+      "Hand-built orchestration (no LangChain) with free DuckDuckGo search",
+      "Model-agnostic on Groq (free), one-line swap to local Ollama",
+    ],
+    tags: ["Python", "Multi-Agent", "LLM", "Groq", "Streamlit", "Agentic AI"],
+    link: "https://github.com/Sahil-hossen/deep-research-agent",
+    featured: true,
+  },
+  {
     name: "GitSense",
     blurb:
       "A RAG pipeline that answers questions about a codebase with accurate, source-cited responses.",
