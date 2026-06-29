@@ -571,14 +571,17 @@ h1, h2, h3 {
   overflow: hidden;
   box-shadow: inset 0 1px 0 var(--glass-highlight);
 }
-/* cursor spotlight */
-.project-card::before {
+/* cursor spotlight — shared across cards */
+.glow-card {
+  position: relative;
+}
+.glow-card::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: var(--radius);
   background: radial-gradient(
-    260px circle at var(--mx, 50%) var(--my, 0%),
+    260px circle at var(--mx, 50%) var(--my, 50%),
     rgba(110, 168, 254, 0.18),
     transparent 60%
   );
@@ -587,10 +590,10 @@ h1, h2, h3 {
   pointer-events: none;
   z-index: 0;
 }
-.project-card:hover::before {
+.glow-card:hover::before {
   opacity: 1;
 }
-.project-card > * {
+.glow-card > * {
   position: relative;
   z-index: 1;
 }

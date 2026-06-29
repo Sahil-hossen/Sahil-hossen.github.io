@@ -1,5 +1,6 @@
 import Section from "./Section";
 import { education } from "../data/portfolio";
+import { handleSpotlight } from "../lib/spotlight";
 
 export default function About() {
   return (
@@ -26,7 +27,7 @@ export default function About() {
           </p>
         </div>
 
-        <aside className="edu-card">
+        <aside className="edu-card glow-card" onMouseMove={handleSpotlight}>
           <h3>Education</h3>
           {education.map((e) => (
             <div className="edu-item" key={e.school}>

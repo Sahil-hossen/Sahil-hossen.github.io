@@ -1,14 +1,7 @@
-import type { MouseEvent } from "react";
 import Section from "./Section";
 import { projects } from "../data/portfolio";
 import { CodeIcon, ArrowIcon, GithubIcon, MergeIcon } from "./icons";
-
-function handleSpotlight(e: MouseEvent<HTMLElement>) {
-  const card = e.currentTarget;
-  const rect = card.getBoundingClientRect();
-  card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-  card.style.setProperty("--my", `${e.clientY - rect.top}px`);
-}
+import { handleSpotlight } from "../lib/spotlight";
 
 export default function Projects() {
   return (
@@ -16,7 +9,7 @@ export default function Projects() {
       <div className="projects-grid">
         {projects.map((p) => (
           <article
-            className="project-card"
+            className="project-card glow-card"
             key={p.name}
             onMouseMove={handleSpotlight}
           >
