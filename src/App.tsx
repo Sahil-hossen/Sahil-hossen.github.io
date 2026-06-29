@@ -1,4 +1,6 @@
 import Navbar from "./components/Navbar";
+import AnimatedBackground from "./components/AnimatedBackground";
+import ScrollProgress from "./components/ScrollProgress";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import ExperienceSection from "./components/ExperienceSection";
@@ -11,6 +13,8 @@ import { profile } from "./data/portfolio";
 export default function App() {
   return (
     <>
+      <AnimatedBackground />
+      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />

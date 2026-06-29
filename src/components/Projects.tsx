@@ -1,13 +1,25 @@
+import type { MouseEvent } from "react";
 import Section from "./Section";
 import { projects } from "../data/portfolio";
 import { CodeIcon, ArrowIcon, GithubIcon, MergeIcon } from "./icons";
+
+function handleSpotlight(e: MouseEvent<HTMLElement>) {
+  const card = e.currentTarget;
+  const rect = card.getBoundingClientRect();
+  card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+  card.style.setProperty("--my", `${e.clientY - rect.top}px`);
+}
 
 export default function Projects() {
   return (
     <Section id="projects" kicker="03 / Projects" title="Things I've built">
       <div className="projects-grid">
         {projects.map((p) => (
-          <article className="project-card" key={p.name}>
+          <article
+            className="project-card"
+            key={p.name}
+            onMouseMove={handleSpotlight}
+          >
             <div className="project-head">
               <div>
                 {p.featured && <span className="featured-flag">Featured</span>}
